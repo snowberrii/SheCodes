@@ -1,0 +1,201 @@
+.theme-button {
+  display: flex;
+  text-align: right;
+  background: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  border: solid rgba(251, 251, 251, 0.452) 0.5px;
+  margin: 15px auto;
+  padding: 3px 10px;
+}
+
+.theme-button:hover {
+  background: rgb(25, 25, 25);
+  cursor: pointer;
+}
+
+.light {
+  display: flex;
+  text-align: right;
+  background: rgb(255, 255, 255);
+  color: black;
+  border-radius: 10px;
+  border: solid rgba(251, 251, 251, 0.452) 0.5px;
+  margin: 15px auto;
+  padding: 3px 10px;
+}
+
+.light:hover {
+  background: rgb(214, 214, 214);
+  cursor: pointer;
+}
+
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/417/original/lunox-skin-mlbb.jpg?1696747615");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  font-family: "Delius", cursive;
+}
+
+.container {
+  background: radial-gradient(
+    328px at 2.9% 15%,
+    rgba(191, 224, 251, 0.8) 0%,
+    rgba(232, 233, 251, 0.8) 25.8%,
+    rgba(252, 239, 250, 0.8) 50.8%,
+    rgba(234, 251, 251, 0.8) 77.6%,
+    rgba(240, 251, 244, 0.8) 100.7%
+  );
+  display: block;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 60%;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.dark {
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+img {
+  border-radius: 10px;
+  transition: all 150ms ease-in-out;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.img-cover {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.img-cover:hover {
+  transform: scale(1.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+}
+
+.gallery-img {
+  max-width: 100%;
+  text-align: center;
+}
+
+.gallery-img:hover {
+  transform: scale(1.2);
+}
+
+.button-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 200px; /* Set a fixed width for the buttons */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.download-ios {
+  background-color: #3498db;
+  color: black;
+}
+
+.download-ios:hover {
+  background-color: #0483d8;
+  color: black;
+}
+
+.download-android {
+  background-color: #4caf50;
+  color: black;
+}
+
+.download-android:hover {
+  background-color: #1daf22;
+  color: black;
+}
+
+.introduction {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+  margin: 1em 5em;
+}
+
+p {
+  display: block;
+  line-height: 2;
+  text-align: left;
+}
+
+.learn-more {
+  font-size: 12px;
+}
+
+.wikipedia {
+  text-decoration: none;
+  color: purple;
+}
+
+.wikipedia:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.dark-mode-text {
+  color: white;
+}
+
+.dark-mode-text:hover {
+  color: white;
+}
+
+footer {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
