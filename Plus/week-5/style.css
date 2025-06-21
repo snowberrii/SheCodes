@@ -29,7 +29,6 @@ body {
   font-family: "Fuzzy Bubbles", sans-serif;
   background: rgb(216, 131, 160);
   font-size: 1.2em;
-  width: 18%;
   border-radius: 0.5em;
   padding: 0.8em;
   border: none;
@@ -45,9 +44,14 @@ body {
 
 .current-city-container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   margin: 0 2em;
+}
+
+.current-weather-info {
+  display: flex;
+  align-items: center;
 }
 
 .current-city {
@@ -115,4 +119,68 @@ footer a:visited {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    margin: 3em 12em 1.5em;
+  }
+}
+
+@media (max-width: 1050px) {
+  .main-container {
+    margin: 3em 10em 1.5em;
+  }
+}
+
+@media (max-width: 950px) {
+  .main-container {
+    margin: 3em 8em 1.5em;
+  }
+}
+
+@media (max-width: 850px) {
+  .main-container {
+    margin: 3em 6em 1.5em;
+  }
+}
+
+@media (max-width: 750px) {
+  .main-container {
+    margin: 3em 4em 1.5em;
+  }
+
+  .current-city-container {
+    flex-direction: column-reverse;
+  }
+
+  .current-weather-info {
+    margin-top: 1em;
+  }
+
+  .current-city,
+  .current-temp {
+    margin: 0;
+    justify-self: center;
+  }
+
+  .current-details {
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  ul li {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-container {
+    margin: 2em 1em 1.5em;
+  }
 }
