@@ -183,4 +183,11 @@ footer a:hover {
   .main-container {
     margin: 2em 1em 1.5em;
   }
+
+  .current-city {
+    text-align: center;
+  }
+  .current-city-container {
+    margin: 0;
+  }
 }
