@@ -64,8 +64,8 @@ function search(event) {
   let city = searchCity.value;
   let formattedCityName = formatName(city);
 
-  let apiKey = ""; // your api key here
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${formattedCityName}&key=${apiKey}&units=imperial`;
+  const apiKey = config.apiKey; // your api key
+  const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${formattedCityName}&key=${apiKey}&units=imperial`;
 
   changeCity.innerHTML = `${formattedCityName}`;
 
