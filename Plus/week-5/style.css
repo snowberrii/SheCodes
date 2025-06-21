@@ -1,0 +1,118 @@
+body {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  background-color: #fad1d9;
+}
+
+.main-container {
+  background-color: white;
+  margin: 3em 18em 1.5em;
+  padding: 2em;
+  border-radius: 1em;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-city-input {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  background: rgb(252, 230, 234);
+  font-size: 1.2em;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  width: 80%;
+}
+
+.search-button {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  background: rgb(216, 131, 160);
+  font-size: 1.2em;
+  width: 18%;
+  border-radius: 0.5em;
+  padding: 0.8em;
+  border: none;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.search-button:hover {
+  background: rgb(216, 118, 151);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.current-city-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 2em;
+}
+
+.current-city {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.current-details {
+  color: rgb(99, 99, 99);
+  line-height: 1.5;
+}
+
+.humidity,
+.wind {
+  color: rgb(55, 220, 55);
+  font-weight: bold;
+}
+
+.current-temp {
+  font-size: 3.3em;
+  font-weight: bold;
+  align-self: center;
+  display: flex;
+}
+
+.smaller {
+  font-size: 0.5em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  font-size: smaller;
+  font-weight: bold;
+  text-align: center;
+}
+
+.high-temp {
+  font-weight: lighter;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.7em;
+  color: gray;
+}
+
+footer a {
+  color: rgb(248, 120, 141);
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: rgb(248, 120, 141);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
