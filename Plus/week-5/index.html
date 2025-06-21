@@ -26,17 +26,20 @@
 
       <div class="current-city-container">
         <div class="current-city-info">
-          <h1 class="current-city">Seattle</h1>
+          <h1 class="current-city"></h1>
 
           <p class="current-details">
             <span class="current-time"></span> <br />
-            <span class="current-condition">Moderate rain</span> <br />
+            <span class="current-condition"></span> <br />
             Humidity:
-            <span class="humidity">87%</span>, Wind:
-            <span class="wind">7.2km/h</span>
+            <span class="humidity"></span>, Wind:
+            <span class="wind"></span>
           </p>
         </div>
-        <h2 class="current-temp">⛅</h2>
+        <div class="current-weather-info">
+          <span class="current-weather-icon"></span>
+          <h2 class="current-temp"></h2>
+        </div>
       </div>
 
       <ul>
@@ -100,6 +103,10 @@
           >on GitHub</a
         >
         and <a href="">hosted on Netlify</a>
+      </p>
+      <p>
+        FYI : The API returns the last time the weather was updated and not the
+        current time in the city you searched!
       </p>
     </footer>
     <script src="config.js"></script>
