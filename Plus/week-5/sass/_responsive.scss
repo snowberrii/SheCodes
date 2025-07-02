@@ -1,70 +1,94 @@
 @media (max-width: 1200px) {
-    .main-container {
-      margin: 3em 12em 1.5em;
-    }
+  .main-container {
+    margin: 3em 12em 1.5em;
   }
-  
-  @media (max-width: 1050px) {
-    .main-container {
-      margin: 3em 10em 1.5em;
-    }
+}
+
+@media (max-width: 1050px) {
+  .main-container {
+    margin: 3em 10em 1.5em;
   }
-  
-  @media (max-width: 950px) {
-    .main-container {
-      margin: 3em 8em 1.5em;
-    }
+}
+
+@media (max-width: 950px) {
+  .main-container {
+    margin: 3em 8em 1.5em;
   }
-  
-  @media (max-width: 850px) {
-    .main-container {
-      margin: 3em 6em 1.5em;
-    }
+}
+
+@media (max-width: 850px) {
+  .main-container {
+    margin: 3em 6em 1.5em;
   }
-  
-  @media (max-width: 750px) {
-    .main-container {
-      margin: 3em 4em 1.5em;
-    }
-  
-    .current-city-container {
-      flex-direction: column-reverse;
-    }
-  
-    .current-weather-info {
-      margin-top: 1em;
-    }
-  
-    .current-city,
-    .current-temp {
-      margin: 0;
-      justify-self: center;
-    }
-  
-    .current-details {
-      text-align: center;
-    }
-  
-    ul {
-      flex-direction: column;
-    }
-  
-    ul li {
+}
+
+@media (max-width: 750px) {
+  .main-container {
+    margin: 3em 4em 1.5em;
+  }
+
+  .current-city-container {
+    flex-direction: column-reverse;
+  }
+
+  .current-weather-info {
+    margin-top: 1em;
+  }
+
+  .current-city,
+  .current-temp {
+    margin: 0;
+    justify-self: center;
+  }
+
+  .current-details {
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+    li {
       flex-direction: row;
       justify-content: center;
       gap: 3em;
     }
   }
-  
-  @media (max-width: 500px) {
-    .main-container {
-      margin: 2em 1em 1.5em;
-    }
-  
-    .current-city {
-      text-align: center;
-    }
-    .current-city-container {
-      margin: 0;
-    }
+}
+
+@media (max-width: 500px) {
+  .main-container {
+    margin: 2em 1em 1.5em;
   }
+  .current-city {
+    text-align: center;
+  }
+  .current-city-container {
+    margin: 0;
+  }
+
+  .forecast-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  .forecast-day {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .forecast-date {
+    width: 60px;
+  }
+
+  .forecast-temps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+    width: 60px;
+  }
+}
