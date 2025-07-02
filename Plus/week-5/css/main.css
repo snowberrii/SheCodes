@@ -80,28 +80,29 @@ body {
   font-size: 0.5em;
 }
 
-ul {
-  list-style: none;
+.forecast-container {
   display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-  font-size: smaller;
-  font-weight: bold;
+  justify-content: space-evenly;
   text-align: center;
-}
-ul li {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2em;
-}
-ul li .day,
-ul li .weather-emoji {
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
-.high-temp {
-  font-weight: lighter;
+.forecast-date {
+  font-weight: bold;
+}
+
+.forecast-temps {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.forecast-high-temp {
+  font-weight: bold;
+}
+
+.forecast-img {
+  width: 50%;
 }
 
 footer {
@@ -176,5 +177,27 @@ footer a:hover {
   }
   .current-city-container {
     margin: 0;
+  }
+  .forecast-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .forecast-day {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .forecast-date {
+    width: 60px;
+  }
+  .forecast-temps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+    width: 60px;
   }
 }
