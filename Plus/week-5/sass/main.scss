@@ -1,0 +1,139 @@
+// ---------- Partials variables ---------- //
+@import "variables";
+
+// ---------- Base ---------- //
+body {
+  font-family: $font-fam;
+  background-color: #fad1d9;
+}
+
+// ---------- Layout ---------- //
+.main-container {
+  background-color: white;
+  margin: 3em 18em 1.5em;
+  padding: 2em;
+  border-radius: 1em;
+}
+
+// ---------- Search Bar ---------- //
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-city-input {
+  font-family: $font-fam;
+  background: $search-box-color;
+  font-size: 1.2em;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  width: 80%;
+}
+
+.search-button {
+  font-family: $font-fam;
+  background: $search-btn-color;
+  font-size: 1.2em;
+  border-radius: 0.5em;
+  padding: 0.8em;
+  border: none;
+  color: $container-color;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background: $search-btn-hover-color;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+// ---------- Current weather details : left side or bottom ---------- //
+.current-city-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2em;
+}
+
+.current-weather-info {
+  display: flex;
+  align-items: center;
+}
+
+.current-city {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.current-details {
+  color: $current-detail-text-color;
+  line-height: 1.5;
+}
+
+.humidity,
+.wind {
+  color: $humidity-and-wind-color;
+  font-weight: bold;
+}
+
+// ---------- Current weather details : right side or top ---------- //
+.current-temp {
+  font-size: 3.3em;
+  font-weight: bold;
+  align-self: center;
+  display: flex;
+}
+
+.smaller {
+  font-size: 0.5em; //added class in js
+}
+
+// ---------- 5 days weather forecast ---------- //
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  font-size: smaller;
+  font-weight: bold;
+  text-align: center;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+
+    .day,
+    .weather-emoji {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.high-temp {
+  font-weight: lighter;
+}
+
+// ---------- footer ---------- //
+footer {
+  text-align: center;
+  font-size: 0.7em;
+  color: $footer-text-color;
+
+  a {
+    color: $footer-link-color;
+    text-decoration: none;
+    &:visited {
+      color: $footer-link-color;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ---------- Partials responsive ---------- //
+@import "responsive";
