@@ -130,6 +130,21 @@ body {
   width: 50%;
 }
 
+// Animation for forecast-day
+.forecast-day {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 // ---------- footer ---------- //
 footer {
   text-align: center;
