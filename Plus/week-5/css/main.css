@@ -159,14 +159,6 @@ footer a:hover {
   .current-details {
     text-align: center;
   }
-  ul {
-    flex-direction: column;
-  }
-  ul li {
-    flex-direction: row;
-    justify-content: center;
-    gap: 3em;
-  }
 }
 @media (max-width: 500px) {
   .main-container {
@@ -177,6 +169,13 @@ footer a:hover {
   }
   .current-city-container {
     margin: 0;
+  }
+  .search-city-input {
+    width: 70%;
+    font-size: 1em;
+  }
+  .search-button {
+    font-size: 1em;
   }
   .forecast-container {
     display: flex;
@@ -199,5 +198,8 @@ footer a:hover {
     justify-content: center;
     gap: 0.5em;
     width: 60px;
+  }
+  .forecast-img {
+    width: 70%;
   }
 }
