@@ -46,34 +46,47 @@ function toCelsius(fahrenheit) {
 }
 
 function renderTemperature(temp, unit) {
-  currentUnit = unit; // update global unit
-  localStorage.setItem("unit", unit); // save user preference
+  currentUnit = unit;
+  localStorage.setItem("unit", unit);
 
   const tempElement = document.querySelector(".current-temp");
+  tempElement.innerHTML = "";
+
   const isFahrenheit = unit === "F";
   const displayTemp = isFahrenheit ? temp : toCelsius(temp);
 
-  tempElement.innerHTML = `
-    ${displayTemp}
-    <div class="unit-toggle">
-      <a href="#" id="fahrenheit-link" class="${
-        isFahrenheit ? "active" : ""
-      }">°F</a>|<a href="#" id="celsius-link" class="${
-        !isFahrenheit ? "active" : ""
-      }">°C</a>
-    </div>
-  `;
+  const tempValue = document.createTextNode(displayTemp + " ");
 
-  document
-    .querySelector("#fahrenheit-link")
-    .addEventListener("click", displayFahrenheitTemp);
-  document
-    .querySelector("#celsius-link")
-    .addEventListener("click", displayCelsiusTemp);
+  const toggleDiv = document.createElement("div");
+  toggleDiv.className = "unit-toggle";
 
-  displayForecast(forecastData); // re-render forecast in correct unit
+  const fahrenheitLink = document.createElement("a");
+  fahrenheitLink.href = "#";
+  fahrenheitLink.id = "fahrenheit-link";
+  fahrenheitLink.textContent = "°F";
+  if (isFahrenheit) fahrenheitLink.classList.add("active");
+
+  const celsiusLink = document.createElement("a");
+  celsiusLink.href = "#";
+  celsiusLink.id = "celsius-link";
+  celsiusLink.textContent = "°C";
+  if (!isFahrenheit) celsiusLink.classList.add("active");
+
+  const separator = document.createTextNode("|");
+
+  toggleDiv.appendChild(fahrenheitLink);
+  toggleDiv.appendChild(separator);
+  toggleDiv.appendChild(celsiusLink);
+
+  tempElement.appendChild(tempValue);
+  tempElement.appendChild(toggleDiv);
+
+  fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+  celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+  // 🔁 Re-render forecast when unit changes
+  displayForecast(forecastData);
 }
-
 
 function displayCelsiusTemp(event) {
   event.preventDefault();
@@ -125,14 +138,18 @@ function formatName(text) {
 }
 
 function displayForecast(response) {
-  forecastData = response; // save for toggling
+  // Normalize the input and ensure structure is consistent
+  const data = response.data ? response.data : response;
+
+  // Save it in correct format: always with `.daily`
+  forecastData = { daily: data.daily };
 
   const forecastContainer = document.querySelector(".forecast-container");
   forecastContainer.innerHTML = "";
 
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  response.data.daily.slice(1, 6).forEach((day) => {
+  data.daily.slice(1, 6).forEach((day) => {
     const date = new Date(day.time * 1000);
     const dayName = daysOfWeek[date.getDay()];
 
@@ -148,23 +165,42 @@ function displayForecast(response) {
       low = Math.round(low);
     }
 
-    const forecastHTML = `
-      <div class="forecast-day">
-        <div class="forecast-date">${dayName}</div>
-        <div class="forecast-icon">
-          <img src="${icon}" alt="icon" class="forecast-img" />
-        </div>
-        <div class="forecast-temps">
-          <div class="forecast-high-temp">${high}&deg;</div>
-          <div class="forecast-low-temp">${low}&deg;</div>
-        </div>
-      </div>
-    `;
+    const forecastDay = document.createElement("div");
+    forecastDay.classList.add("forecast-day");
 
-    forecastContainer.innerHTML += forecastHTML;
+    const dateDiv = document.createElement("div");
+    dateDiv.classList.add("forecast-date");
+    dateDiv.textContent = dayName;
+
+    const iconDiv = document.createElement("div");
+    iconDiv.classList.add("forecast-icon");
+    const img = document.createElement("img");
+    img.src = icon;
+    img.alt = "icon";
+    img.className = "forecast-img";
+    iconDiv.appendChild(img);
+
+    const tempsDiv = document.createElement("div");
+    tempsDiv.classList.add("forecast-temps");
+
+    const highDiv = document.createElement("div");
+    highDiv.classList.add("forecast-high-temp");
+    highDiv.innerHTML = `${high}&deg;`;
+
+    const lowDiv = document.createElement("div");
+    lowDiv.classList.add("forecast-low-temp");
+    lowDiv.innerHTML = `${low}&deg;`;
+
+    tempsDiv.appendChild(highDiv);
+    tempsDiv.appendChild(lowDiv);
+
+    forecastDay.appendChild(dateDiv);
+    forecastDay.appendChild(iconDiv);
+    forecastDay.appendChild(tempsDiv);
+
+    forecastContainer.appendChild(forecastDay);
   });
 }
-
 
 function updateCurrentWeather(response) {
   showCurrentTime(response);
