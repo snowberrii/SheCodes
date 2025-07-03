@@ -12,19 +12,19 @@
 
 @media (max-width: 950px) {
   .main-container {
-    margin: 3em 8em 1.5em;
+    margin: 3em 6em 1.5em;
   }
 }
 
 @media (max-width: 850px) {
   .main-container {
-    margin: 3em 6em 1.5em;
+    margin: 3em 4em 1.5em;
   }
 }
 
 @media (max-width: 750px) {
   .main-container {
-    margin: 3em 4em 1.5em;
+    margin: 3em 2em 1.5em;
   }
 
   .current-city-container {
@@ -66,6 +66,10 @@
 
   .search-button {
     font-size: 1em;
+  }
+
+  .unit-toggle {
+    font-size: 0.5em;
   }
 
   .forecast-container {
