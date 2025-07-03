@@ -4,7 +4,7 @@
 // ---------- Base ---------- //
 body {
   font-family: $font-fam;
-  background-color: #fad1d9;
+  background-color: $background-color;
 }
 
 // ---------- Layout ---------- //
@@ -85,9 +85,24 @@ body {
   display: flex;
 }
 
-.smaller {
-  font-size: 0.5em; //added class in js
+.unit-toggle {
+  font-size: 0.6em; //added class in js
+  color: #999;
+  a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #999;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  a.active {
+    color: #000;
+    font-weight: bold;
+  }
 }
+
+
+
 
 // ---------- 5 days weather forecast ---------- //
 .forecast-container {
