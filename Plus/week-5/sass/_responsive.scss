@@ -44,26 +44,28 @@
   .current-details {
     text-align: center;
   }
-
-  ul {
-    flex-direction: column;
-    li {
-      flex-direction: row;
-      justify-content: center;
-      gap: 3em;
-    }
-  }
 }
 
 @media (max-width: 500px) {
   .main-container {
     margin: 2em 1em 1.5em;
   }
+
   .current-city {
     text-align: center;
   }
+
   .current-city-container {
     margin: 0;
+  }
+
+  .search-city-input {
+    width: 70%;
+    font-size: 1em;
+  }
+
+  .search-button {
+    font-size: 1em;
   }
 
   .forecast-container {
@@ -90,5 +92,9 @@
     justify-content: center;
     gap: 0.5em;
     width: 60px;
+  }
+
+  .forecast-img {
+    width: 70%;
   }
 }
